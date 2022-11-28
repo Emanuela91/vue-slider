@@ -11,6 +11,7 @@ const {createApp} = Vue;
     createApp({
         data() {
             return {
+                activeImage: 0,
                 slides : {
                     
                         image: ['img/01.webp'],
@@ -38,8 +39,3 @@ const {createApp} = Vue;
         }
     }
     ).mount('#app');
-
-
-
-
-console.log(slides);
