@@ -17,11 +17,11 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides.image[activeImage]" alt="Spiderman" />
+                    <img :src="slides[activeItems].image" alt="Spiderman" />
                     <div class="text">
-                        <h3>{{slides.title}} </h3>
+                        <h3>{{slides[activeItems].title}} </h3>
                         <p>
-                           {{slides.text}} 
+                           {{slides[activeItems].text}} 
                         </p>
                     </div>
                 </div>
@@ -31,9 +31,9 @@
                     <div class="next"></div>
                     <div class="thumb">
                         <img 
-                        v-for="miniatura in slides.image"
-                        :src="miniatura" alt="Svezia" 
-                        class="thumb active"/>
+                        v-for="(miniatura , index) in slides"
+                        :src="miniatura.image" alt="Svezia" 
+                        :class="index === activeItems ? 'thumb active' : ''"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
