@@ -40,5 +40,23 @@ const {createApp} = Vue;
                     }   
                 ]
             }
+        },
+
+    // Bottoni avanti e indietro
+    methods: {
+        nextImage(){
+            this.activeItems++;
+            // aggiungo loop
+            if(this.activeItems > this.slides.lenght -1){
+                this.activeItems = 0;
+            }
+        },
+        prevImage(){
+            this.activeItems--;
+            // aggiungo loop
+            if(this.activeItems < 0){
+                this.activeItems = this.slides.lenght -1;
+            }
         }
+    }
     }).mount('#app')
