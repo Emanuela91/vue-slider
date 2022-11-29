@@ -29,11 +29,12 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
-                    <div class="thumb">
-                        <img 
+                    <div class="thumb" 
                         v-for="(miniatura , index) in slides"
-                        :src="miniatura.image" alt="Svezia" 
-                        :class="index === activeItems ? 'thumb active' : ''"/>
+                        :class="index === activeItems ? 'active' : ''"
+                    >
+                        <img 
+                        :src="miniatura.image" alt="Svezia"> 
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
@@ -46,7 +47,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div> -->
+                    </div> -->                                       
                 </div>
 
             </div>

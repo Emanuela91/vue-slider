@@ -1,6 +1,6 @@
 // Partendo dal markup dato, rifare lo slider
-// ma questa volta usando Vue
-// con le thumbnails.
+// ma questa volta usando Vue con le thumbnails.
+
 // Bonus:
 // 1- al click su una thumb, visualizzare in grande l’immagine corrispondente
 // 2- applicare l’autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
@@ -47,7 +47,7 @@ const {createApp} = Vue;
         nextImage(){
             this.activeItems++;
             // aggiungo loop
-            if(this.activeItems > this.slides.lenght -1){
+                         if(this.activeItems > this.slides.length -1){
                 this.activeItems = 0;
             }
         },
@@ -55,7 +55,7 @@ const {createApp} = Vue;
             this.activeItems--;
             // aggiungo loop
             if(this.activeItems < 0){
-                this.activeItems = this.slides.lenght -1;
+                this.activeItems = this.slides.length -1;
             }
         }
     }
